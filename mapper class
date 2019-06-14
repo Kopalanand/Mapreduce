@@ -1,7 +1,6 @@
-package WellnessCentre;
+package wellnessCentre;
 
 import java.io.IOException;
-import java.util.*;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
@@ -10,19 +9,21 @@ import org.apache.hadoop.mapred.*;
 
 
 
+@SuppressWarnings("unused")
 public class WellnessMapper extends MapReduceBase implements Mapper <LongWritable,Text,Text,IntWritable>
 {
 	
 	private final static IntWritable one = new IntWritable(1);
 
-	public void map(LongWritable key, Text value, OutputCollector <Text, IntWritable> output)throws IOException
+	public void map(LongWritable key, Text value, OutputCollector <Text, IntWritable> output ,  Reporter reporter)throws IOException
 	{
 		String str = value.toString();
 		String[] categorydata = str.split(",");
-		output.collect(new Text(categorydata[6],one);
+		
+		output.collect(new Text(categorydata[6]), one);
 	}
 
-}
+} 
 
 
 
