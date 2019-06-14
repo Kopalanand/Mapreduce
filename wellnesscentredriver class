@@ -1,11 +1,9 @@
-package WellnessCentre;
+package wellnessCentre;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.*;
 import org.apache.hadoop.mapred.*;
 
-
 public class WellnessCentreDriver {
-
 	public static void main(String[] args) {
 		{
 			JobClient my_client = new JobClient();
@@ -28,8 +26,8 @@ public class WellnessCentreDriver {
 		    job_conf.setOutputFormat(TextOutputFormat.class);
 
 		   
-		    FileInputFormat.setInputPaths(job_conf, new Path(job_conf, new Path(args[0]));
-		    FileOutputFormat.setOutputPath(job_conf, new Path(job_conf, new Path(args[1]));
+		    FileInputFormat.setInputPaths(job_conf,  new Path(args[0]));
+		    FileOutputFormat.setOutputPath(job_conf,  new Path(args[1]));
 
 		    my_client.setConf(job_conf);
 		    try {
@@ -42,4 +40,6 @@ public class WellnessCentreDriver {
 		// TODO Auto-generated method stub
 
 	}
+	
+
 }
