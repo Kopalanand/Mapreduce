@@ -28,8 +28,8 @@ public class WellnessCentreDriver {
 		    job_conf.setOutputFormat(TextOutputFormat.class);
 
 		   
-		    FileInputFormat.setInputPaths(job_conf, new Path("C:\Users\Kopal Anand\Desktop\internship\datafile.xls));
-		    FileOutputFormat.setOutputPath(job_conf, new Path("C:\Users\Kopal Anand\Desktop\internship\datafile.xls"));
+		    FileInputFormat.setInputPaths(job_conf, new Path(job_conf, new Path(args[0]));
+		    FileOutputFormat.setOutputPath(job_conf, new Path(job_conf, new Path(args[1]));
 
 		    my_client.setConf(job_conf);
 		    try {
