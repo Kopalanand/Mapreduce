@@ -20,8 +20,8 @@ public class WellnessCentreDriver {
 		    job_conf.setOutputValueClass(IntWritable.class);
 
 
-		    job_conf.setMapperClass(WellnessCentre.WellnessMapper.class);
-		    job_conf.setReducerClass(WellnessCentre.WellnessReducer.class);
+		    job_conf.setMapperClass(wellnessCentre.WellnessMapper.class);
+		    job_conf.setReducerClass(wellnessCentre.WellnessReducer.class);
 
 		   
 		    job_conf.setInputFormat(TextInputFormat.class);
